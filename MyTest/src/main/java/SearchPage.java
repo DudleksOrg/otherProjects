@@ -1,9 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -13,20 +11,21 @@ import java.util.List;
  */
 public class SearchPage {
 
-    final static String pageTitle = "Ноутбуки - выбирайте и покупайте на Яндекс.Маркете";
-    By itemProcessor = By.xpath(".//*[@id='TypeOfProcessor']//select[@name='2142398543']/option[contains(.,'Celeron')]");
-    By submit = By.xpath(".//input[@value='Подобрать']");
-    By listOfPrices = By.xpath(".//div[@class='snippet-card__price i-bem snippet-card__price_js_inited']/span[@class='price']");
-    By listOfLaptops = By.xpath("descendant::span[@class='snippet-card__header-text']");
+    final static String pageTitle = "РќРѕСѓС‚Р±СѓРєРё - РІС‹Р±РёСЂР°Р№С‚Рµ Рё РїРѕРєСѓРїР°Р№С‚Рµ РЅР° РЇРЅРґРµРєСЃ.РњР°СЂРєРµС‚Рµ";
+
+    final static By submit = By.xpath(".//input[@value='РџРѕРґРѕР±СЂР°С‚СЊ']");
+    final static By listOfPrices = By.xpath(".//div[@class='snippet-card__price i-bem snippet-card__price_js_inited']/span[@class='price']");
+    final static By listOfLaptops = By.xpath("descendant::span[@class='snippet-card__header-text']");
 
     private final WebDriver driver;
 
     public SearchPage(WebDriver driver) {
         this.driver = driver;
-        Helper.waitPageTitle(driver, pageTitle);
+        //Helper.waitPageTitle(driver, pageTitle);
     }
 
-    public SearchPage selectItemOfProcessors() {
+    public SearchPage selectItemOfProcessors(String name) {
+        By itemProcessor = By.xpath(".//*[@id='TypeOfProcessor']//select[@name='2142398543']/option[contains(.,'" + name + "')]");
         Helper.waitPageElement(driver, itemProcessor);
         WebElement option = driver.findElement(itemProcessor);
         option.click();
@@ -39,19 +38,13 @@ public class SearchPage {
         return this;
     }
 
-
-    public String calculateMinPrice() {
-        int index = 0;
+    public List getAllPrices(By by) {
         String price = null;
-        String laptopName = null;
         List priceList = null;
-        List laptopList = null;
         priceList = new ArrayList<Integer>();
-        laptopList = new ArrayList<String>();
-        Helper.waitPageElement(driver, listOfPrices);
-        List<WebElement> allPrices = driver.findElements(listOfPrices);
-        Helper.waitPageElement(driver, listOfLaptops);
-        List<WebElement> allLaptops = driver.findElements(listOfLaptops);
+
+        Helper.waitPageElement(driver, by);
+        List<WebElement> allPrices = driver.findElements(by);
 
         for (WebElement element : allPrices) {
             price = element.getText();
@@ -60,11 +53,27 @@ public class SearchPage {
             //System.out.println(price);
         }
 
+        return priceList;
+    }
+
+    public List getAllLaptops(By by) {
+        String laptopName = null;
+        List laptopList = null;
+        laptopList = new ArrayList<String>();
+
+        Helper.waitPageElement(driver, by);
+        List<WebElement> allLaptops = driver.findElements(by);
+
         for (WebElement element : allLaptops) {
             laptopName = element.getText();
             laptopList.add(laptopName);
             //System.out.println(laptopName);
         }
-        return (String) laptopList.get(priceList.indexOf(Collections.min(priceList)));
+
+        return laptopList;
+    }
+
+    public String calculateMinPrice(List list, List list2) {
+        return (String) list.get(list2.indexOf(Collections.min(list2)));
     }
 }
