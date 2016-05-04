@@ -36,7 +36,7 @@ public class Main {
         List lList = searchPage.getAllLaptops(SearchPage.listOfLaptops);
         System.out.println(Step.set() + ". Calculate a minimum price from the list of notebooks.");
         System.out.println(" ________________________________________________________________________________________________________________");
-        System.out.println("| Minimum price from the list of notebooks on the page of search: " + searchPage.calculateMinPrice(lList, pList));
+        System.out.println("| The notebook with minimum price on the page of search is : " + searchPage.calculateMinPrice(lList, pList));
         System.out.println("|________________________________________________________________________________________________________________");
         Step.nullify();
         driver.quit();
