@@ -21,7 +21,7 @@ public class SearchPage {
 
     public SearchPage(WebDriver driver) {
         this.driver = driver;
-
+        Helper.waitForLoad(driver);
     }
 
     public SearchPage checkPage(By by) {

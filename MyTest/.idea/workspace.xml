@@ -26,8 +26,8 @@
       <file leaf-file-name="SearchTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SearchTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+            <state relative-caret-position="147">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchPage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/SearchPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+            <state relative-caret-position="306">
+              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,23 +50,31 @@
       <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="127" selection-start-line="10" selection-start-column="127" selection-end-line="10" selection-end-column="127" />
+            <state relative-caret-position="306">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReadProperties.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ReadProperties.java">
+      <file leaf-file-name="Helper.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Helper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            <state relative-caret-position="341">
+              <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#409#425#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FluentWait.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.0/selenium-support-2.53.0.jar!/org/openqa/selenium/support/ui/FluentWait.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,7 +82,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="153">
               <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -110,13 +118,13 @@
         <option value="$PROJECT_DIR$/src/main/java/Locators.java" />
         <option value="$PROJECT_DIR$/target/classes/locators.properties" />
         <option value="$PROJECT_DIR$/src/main/java/ReadProperties.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Helper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/locators.properties" />
         <option value="$PROJECT_DIR$/src/test/resource/locators.properties" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/SearchTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/HomePage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Helper.java" />
         <option value="$PROJECT_DIR$/src/main/java/SearchPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/HomePage.java" />
       </list>
     </option>
   </component>
@@ -698,7 +706,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5109034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5109034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -774,7 +782,7 @@
           <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="60" />
+      <option name="time" value="64" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="TestNG">
@@ -828,7 +836,7 @@
           <folding>
             <element signature="imports" expanded="false" />
             <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -878,7 +886,7 @@
           <folding>
             <element signature="imports" expanded="false" />
             <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -913,7 +921,6 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.0/selenium-support-2.53.0.jar!/org/openqa/selenium/support/ui/SystemClock.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar!/com/google/common/collect/ImmutableMap.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.53.0/selenium-remote-driver-2.53.0.jar!/org/openqa/selenium/remote/RemoteWebDriver.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.0/selenium-support-2.53.0.jar!/org/openqa/selenium/support/ui/FluentWait.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.53.0/selenium-remote-driver-2.53.0.jar!/org/openqa/selenium/remote/Response.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.0/selenium-support-2.53.0.jar!/org/openqa/selenium/support/ui/Select.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.0/selenium-support-2.53.0.jar!/org/openqa/selenium/support/ui/ExpectedConditions.class" />
@@ -1034,16 +1041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Helper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.9.10/testng-6.9.10.jar!/org/testng/internal/Invoker.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
@@ -1090,7 +1087,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ReadProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
+        <state relative-caret-position="238">
           <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -1100,9 +1097,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/SearchPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
           <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1110,28 +1117,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.0/selenium-support-2.53.0.jar!/org/openqa/selenium/support/ui/FluentWait.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+        <state relative-caret-position="147">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HomePage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Helper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="127" selection-start-line="10" selection-start-column="127" selection-end-line="10" selection-end-column="127" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SearchPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        <state relative-caret-position="341">
+          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
