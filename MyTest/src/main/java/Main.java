@@ -1,7 +1,9 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
+import java.util.TreeMap;
 
 /**
  * Created by Alexey on 03.05.2016.
@@ -9,34 +11,35 @@ import java.util.List;
 
 
 public class Main {
-
+    private static  String processor = "Celeron";
     private static WebDriver driver = new FirefoxDriver();
+    TreeMap<String, String> mapTitles = null;
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, UnsupportedEncodingException {
         driver.manage().window().maximize();
-        System.out.println("1. Open the Browser window fullscreen.");
-        driver.manage().window().maximize();
+
         HomePage homePage = new HomePage(driver);
-        System.out.println("2. Click the 'Catalog' button.");
+        System.out.println(Step.set() + ". Go to the '" + HomePage.homePageAddress + "' address.");
+        homePage.goToAddress(HomePage.homePageAddress);
+        System.out.println(Step.set() + ". Click the 'Catalog' button.");
         homePage.clickCatalogButton();
-        System.out.println("3. Click the 'Notebook' button.");
+        System.out.println(Step.set() + ". Click the 'Notebook' button.");
         homePage.clickNoteBookButton();
         SearchPage searchPage = new SearchPage(driver);
-        System.out.println("4. Select the processor.");
-        searchPage.selectItemOfProcessors("Celeron");
-        System.out.println("5. Click 'Submit' button.");
+        System.out.println(Step.set() + ". Select the '"+ processor +"' processor.");
+        searchPage.selectItemOfProcessors(processor);
+        System.out.println(Step.set() + ". Click 'Submit' button.");
         searchPage.clickSubmitButton();
-        System.out.println("6. Get the list of prices.");
+        System.out.println(Step.set() + ". Get the list of prices.");
         List pList = searchPage.getAllPrices(SearchPage.listOfPrices);
-        System.out.println("7. Get the list of laptops.");
+        System.out.println(Step.set() + ". Get the list of laptops.");
         List lList = searchPage.getAllLaptops(SearchPage.listOfLaptops);
-        System.out.println("8. Calculate a minimum price from the list of notebooks.");
+        System.out.println(Step.set() + ". Calculate a minimum price from the list of notebooks.");
         System.out.println(" ________________________________________________________________________________________________________________");
-        System.out.println("| Minimum price from the list of notebooks on the page of search: " + searchPage.calculateMinPrice(lList,pList));
+        System.out.println("| Minimum price from the list of notebooks on the page of search: " + searchPage.calculateMinPrice(lList, pList));
         System.out.println("|________________________________________________________________________________________________________________");
+        Step.nullify();
         driver.quit();
-
-
     }
 }
 

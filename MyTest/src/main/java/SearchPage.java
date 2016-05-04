@@ -11,17 +11,27 @@ import java.util.List;
  */
 public class SearchPage {
 
-    final static String pageTitle = "Ноутбуки - выбирайте и покупайте на Яндекс.Маркете";
-
-    final static By submit = By.xpath(".//input[@value='Подобрать']");
+    final static String pageTitle = "searchpage.title";
+    final static By submit = By.xpath(".//form[@name='hand-select']//input[@type='submit']");
     final static By listOfPrices = By.xpath(".//div[@class='snippet-card__price i-bem snippet-card__price_js_inited']/span[@class='price']");
     final static By listOfLaptops = By.xpath("descendant::span[@class='snippet-card__header-text']");
+    final static By uniqueElement = By.xpath(".//table[@class='l-page l-page_layout_64-32']");
 
     private final WebDriver driver;
 
     public SearchPage(WebDriver driver) {
         this.driver = driver;
-        //Helper.waitPageTitle(driver, pageTitle);
+
+    }
+
+    public SearchPage checkPage(By by) {
+        Helper.waitPageElement(driver, by);
+        return this;
+    }
+
+    public SearchPage checkPageTitle(String title) {
+        Helper.waitPageTitle(driver, title);
+        return this;
     }
 
     public SearchPage selectItemOfProcessors(String name) {

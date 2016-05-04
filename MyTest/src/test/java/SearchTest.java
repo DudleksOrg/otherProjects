@@ -1,11 +1,14 @@
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.TreeMap;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.fail;
 
 /**
  * Created by Alexey on 04.05.2016.
@@ -13,6 +16,7 @@ import static org.testng.Assert.*;
 public class SearchTest {
     private WebDriver driver;
     private StringBuffer verificationErrors = new StringBuffer();
+    TreeMap<String, String> mapTitles = null;
 
     @DataProvider
     public Object[][] testData() {
@@ -32,27 +36,33 @@ public class SearchTest {
     }
 
     @Test (dataProvider = "testData")
-    public void search(String processor) {
+    public void searchByProcessor(String processor)  {
         try {
             HomePage homePage = new HomePage(driver);
-            System.out.println("1. Click the 'Catalog' button.");
+            System.out.println(Step.set() + ". Go to the '" + HomePage.homePageAddress + "' address.");
+            homePage.goToAddress(HomePage.homePageAddress);
+            System.out.println(Step.set() + ". Check the 'HomePage' by unique element '" +HomePage.uniqueElement + "'.");
+            homePage.checkPage(HomePage.uniqueElement);
+            System.out.println(Step.set() + ". Click the 'Catalog' button.");
             homePage.clickCatalogButton();
-            System.out.println("2. Click the 'Notebook' button.");
+            System.out.println(Step.set() + ". Click the 'Notebook' button.");
             homePage.clickNoteBookButton();
             SearchPage searchPage = new SearchPage(driver);
-            System.out.println("3. Select the '"+ processor +"' processor.");
+            System.out.println(Step.set() + ". Check the 'SearchPage' by unique element '" +SearchPage.uniqueElement + "'.");
+            searchPage.checkPage(SearchPage.uniqueElement);
+            System.out.println(Step.set() + ". Select the '"+ processor +"' processor.");
             searchPage.selectItemOfProcessors(processor);
-            System.out.println("4. Click 'Submit' button.");
+            System.out.println(Step.set() + ". Click 'Submit' button.");
             searchPage.clickSubmitButton();
-            System.out.println("5. Get the list of prices.");
+            System.out.println(Step.set() + ". Get the list of prices.");
             List pList = searchPage.getAllPrices(SearchPage.listOfPrices);
-            System.out.println("6. Get the list of laptops.");
+            System.out.println(Step.set() + ". Get the list of laptops.");
             List lList = searchPage.getAllLaptops(SearchPage.listOfLaptops);
-            System.out.println("7. Calculate a minimum price from the list of notebooks.");
+            System.out.println(Step.set() + ". Calculate a minimum price from the list of notebooks.");
             System.out.println(" ________________________________________________________________________________________________________________");
             System.out.println("| Minimum price from the list of notebooks on the page of search: " + searchPage.calculateMinPrice(lList, pList));
             System.out.println("|________________________________________________________________________________________________________________");
-
+            Step.nullify();
         } catch (Error e) {
             //Capture and append Exceptions/Errors
             verificationErrors.append(e.toString());

@@ -5,17 +5,23 @@ import org.openqa.selenium.WebDriver;
  * Created by Alexey on 03.05.2016.
  */
 public class HomePage {
-    final static String pageTitle = "Яндекс.Маркет — покупки в тысячах проверенных магазинов";
+    final static String pageTitle = "homepage.title";
     final static String homePageAddress = "https://market.yandex.ru/";
     By catalogLocator = By.xpath(".//*[@id='index-headline-id-tab-1']/span[1]");
-    By notebookLocator = By.xpath(".//*[@class='catalog-simple__list']/a[contains(., 'Ноутбуки')]");
+    By notebookLocator = By.xpath(".//a[@href='/catalogmodels.xml?hid=91013&CAT_ID=432460&nid=54544&track=from_cat_categories']");
+    final static By uniqueElement = By.xpath(".//div[@class='headline headline_theme_banner']");
 
     private final WebDriver driver;
 
+
     public HomePage(WebDriver driver) {
-        driver.get(homePageAddress);
         this.driver = driver;
-        //Helper.waitPageTitle(driver, pageTitle);
+    }
+
+
+    public HomePage checkPage(By by) {
+        Helper.waitPageElement(driver, by);
+        return this;
     }
 
     public HomePage clickCatalogButton() {
@@ -30,7 +36,15 @@ public class HomePage {
         return this;
     }
 
+    public HomePage checkPageTitle(String title) {
+        Helper.waitPageTitle(driver, title);
+        return this;
+    }
 
+    public HomePage goToAddress(String url) {
+        driver.get(url);
+        return this;
+    }
 
 
 }

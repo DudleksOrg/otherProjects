@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public class Helper {
 
+
+
     public static void waitPageTitle(WebDriver driver, String title) {
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.titleContains(title));
